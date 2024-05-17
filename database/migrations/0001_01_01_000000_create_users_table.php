@@ -14,9 +14,25 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('user_name');
-            $table->string('password');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->date('application_date');
+            $table->string('membership_applied_for');
+            $table->string('postal_address');
+            $table->string('contact_info');
+            $table->boolean('marital_status');
+            $table->date('date_of_salvation');
+            $table->string('where_do_you_go_to_church');
+            $table->string('name_of_your_pastor');
+            $table->boolean('do_serves_in_church');
+            $table->string('which_department_of_church');
+            $table->string('school_or_work');
+            $table->string('location_of_school_or_work');
+            $table->string('career_path');
+            $table->string('job_or_vacation');
+            $table->string('special_gifts');
+            $table->boolean('recevie_updates');
+            $table->boolean('terms_and_conditions');
             $table->foreignId(Role::class, 'role_id');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

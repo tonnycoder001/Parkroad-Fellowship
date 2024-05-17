@@ -22,11 +22,31 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'user_name',
-        'role',
-        'password',
-    ];
+    protected $guarded = [];
+
+
+    // protected $fillable = [
+    //     'first_name',
+    //     'last_name',
+    //     'email',
+    //     'application_date',
+    //     'membership_applied_for',
+    //     'postal_address',
+    //     'contact_info',
+    //     'marital_status',
+    //     'date_of_salvation',
+    //     'where_do_you_go_to_church',
+    //     'name_of_your_pastor',
+    //     'do_serves_in_church',
+    //     'which_department_of_church',
+    //     'school_or_work',
+    //     'location_of_school_or_work',
+    //     'career_path',
+    //     'job_or_vocation',
+    //     'special_gifts',
+    //     'receive_updates',
+    //     'terms_and_condition',
+    // ];
 
     /**
      * The attributes that should be hidden for serialization.
