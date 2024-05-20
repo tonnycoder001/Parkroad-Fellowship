@@ -2,7 +2,7 @@
 <div class="container mx-auto max-w-sm px-4 py-8">
     <h1 class="text-2xl font-bold text-center mb-6">Parkroad Felowwship</h1>
 
-    <form action="{{ route('register') }}" method="post" class="space-y-4">
+    <form action="{{ route('register') }}" method="POST" class="space-y-4">
         @csrf
         <div class="flex flex-col">
             <label for="Application date" class="text-sm mb-2">Application Date</label>
@@ -10,14 +10,6 @@
                 class="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('application_date') border-red-500 @enderror"
                 value="{{ old('application_date') }}" placeholder="application_date">
-
-
-            {{-- error message --}}
-            @error('first_name')
-                <div class="text-red-500 mt-2 text-sm">
-                    {{ $message }}
-                </div>
-            @enderror
         </div>
 
 
@@ -28,12 +20,6 @@
                 class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('membership_applied_for') border-red-500 @enderror"
                 value="{{ old('membership_applied_for') }}" placeholder="membership_applied_for">
 
-            {{-- error message --}}
-            @error('first_name')
-                <div class="text-red-500 mt-2 text-sm">
-                    {{ $message }}
-                </div>
-            @enderror
         </div>
 
 
@@ -44,12 +30,6 @@
                 class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('first_name') border-red-500 @enderror"
                 value="{{ old('first_name') }}" placeholder="first_name">
 
-            {{-- error message --}}
-            @error('first_name')
-                <div class="text-red-500 mt-2 text-sm">
-                    {{ $message }}
-                </div>
-            @enderror
         </div>
 
 
@@ -62,12 +42,6 @@
                 class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('last_name') border-red-500 @enderror"
                 value="{{ old('last_name') }}" placeholder="last_name">
 
-            {{-- error message --}}
-            @error('last_name')
-                <div class="text-red-500 mt-2 text-sm">
-                    {{ $message }}
-                </div>
-            @enderror
         </div>
 
         <div class="flex flex-col">
@@ -77,12 +51,7 @@
                 class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('postal_address') border-red-500 @enderror"
                 value="{{ old('postal_address') }}" placeholder="postal_address">
 
-            {{-- error message --}}
-            @error('email')
-                <div class="text-red-500 mt-2 text-sm">
-                    {{ $message }}
-                </div>
-            @enderror
+
         </div>
 
         <div class="flex flex-col">
@@ -92,12 +61,7 @@
                 class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror"
                 value="{{ old('email') }}" placeholder="Email">
 
-            {{-- error message --}}
-            @error('email')
-                <div class="text-red-500 mt-2 text-sm">
-                    {{ $message }}
-                </div>
-            @enderror
+
         </div>
 
 
@@ -108,12 +72,6 @@
                 class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('contact_info') border-red-500 @enderror"
                 value="{{ old('contact_info') }}" placeholder="contact_info">
 
-            {{-- error message --}}
-            @error('email')
-                <div class="text-red-500 mt-2 text-sm">
-                    {{ $message }}
-                </div>
-            @enderror
         </div>
 
         <div class="flex flex-col">
@@ -131,7 +89,7 @@
 
         <div class="flex flex-col">
             <label for="date_of_alvation" class="text-sm mb-2">Date of salvation</label>
-            <input type="date_of_salvation" id="date_of_salvation " name="date_of_salvation"
+            <input type="date_of_salvation" id="date " name="date_of_salvation"
                 class="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 placeholder="Your answer">
         </div>
@@ -232,7 +190,7 @@
             </div>
         </div>
 
-        {{--
+
         <div class="flex  flex-col">
             <label for="s" class="text-sm font-medium mr-2">What is your preferred mode for periodic updates
                 and communication?</label>
@@ -249,11 +207,11 @@
                     class="form-radio h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 focus:outline-none">
                 <label for="serves_in_church_no" class="text-sm">Email and Phone</label>
             </div>
-        </div> --}}
+        </div>
 
 
 
-        {{-- <div class="flex flex-col">
+        <div class="flex flex-col">
             <label for="s" class="text-sm font-medium mr-2">What is your preferred mode for periodic updates
                 and communication?</label>
             <div class=" items-center  flex-wrap">
@@ -279,7 +237,7 @@
                         Communiques</label>
                 </div>
             </div>
-        </div> --}}
+        </div>
         <div class="container mx-auto px-4 py-8">
             <div class="border border-gray-300 rounded-md p-4 ">
                 <h2 class="text-lg font-medium mb-2">DECLARATIONS</h2>

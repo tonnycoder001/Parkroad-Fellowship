@@ -13,39 +13,40 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    public function store(Request $request)
+
+    public function register(Request $request)
     {
+        // Validate the request data
         $attributes = $request->validate([
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
-            'email' => 'required|email|unique:users',
             'application_date' => 'required|date',
-            'membership_applied_for' => 'required|string',
-            'postal_address' => 'required|string',
-            'contact_info' => 'required|string',
+            'membership_applied_for' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'postal_address' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'contact_info' => 'required|string|max:255',
             'marital_status' => 'required|string',
-            'date_of_salvation' => 'required|date',
-            'where_do_you_go_to_church' => 'required|string',
-            'name_of_your_pastor' => 'required|string',
-            'do_serves_in_church' => 'required|boolean',
-            'which_department_of_church' => 'required|string',
-            'school_or_work' => 'required|string',
-            'location_of_school_or_work' => 'required|string',
-            'career_path' => 'required|string',
-            'job_or_vocation' => 'required|string',
-            'special_gifts' => 'required|string',
-            'receive_updates' => 'required|array',
-            'terms_and_condition' => 'required|accepted',
-
+            'date_of_salvation' => 'nullable|date',
+            'where_do_you_go_to_church' => 'nullable|string|max:255',
+            'name_of_your_pastor' => 'nullable|string|max:255',
+            'serves_in_church' => 'required|string',
+            'department_of_church' => 'nullable|string|max:255',
+            'school_or_work' => 'nullable|string|max:255',
+            'location_of_school_or_work' => 'nullable|string|max:255',
+            'career_path' => 'nullable|string|max:255',
+            'job_or_vocation' => 'nullable|string|max:255',
+            'special_gifts' => 'nullable|string|max:255',
+            'receive_updates' => 'nullable|array',
+            'terms_and_condition' => 'required|boolean',
         ]);
-
         // Create the user
         $user = User::create($attributes);
 
         // Login the user
         Auth::login($user);
 
-        // Redirect to dashboard
-        return back('Registered');
+
+        // Redirect the user to a specific page, e.g., a thank you page
+        return redirect('/dashboard');
     }
 }

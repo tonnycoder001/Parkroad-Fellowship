@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     return view('dashboard');
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::POST('/register', [RegisterController::class, 'register']);
