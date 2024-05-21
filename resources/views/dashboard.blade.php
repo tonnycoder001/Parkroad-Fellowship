@@ -1,1 +1,1 @@
-<a href="register" class="btn btn-primary">Register</a>
+<h1>Hello</h1>

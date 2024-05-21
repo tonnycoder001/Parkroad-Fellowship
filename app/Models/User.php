@@ -23,6 +23,27 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        // 'application_date',
+        // 'membership_applied_for',
+        // 'first_name',
+        // 'last_name',
+        // 'postal_address',
+        // 'email',
+        // 'contact_info',
+        // 'marital_status',
+        // 'date_of_salvation',
+        // 'where_do_you_go_to_church',
+        // 'name_of_your_pastor',
+        // 'serves_in_church',
+        // 'department_of_church',
+        // 'school_or_work',
+        // 'location_of_school_or_work',
+        // 'career_path',
+        // 'job_or_vocation',
+        // 'special_gifts',
+        // 'receive_updates',
+        // 'terms_and_condition',
+
         'application_date',
         'membership_applied_for',
         'first_name',
@@ -39,15 +60,16 @@ class User extends Authenticatable
         'school_or_work',
         'location_of_school_or_work',
         'career_path',
-        'job_or_vocation',
         'special_gifts',
         'receive_updates',
-        'terms_and_condition',
+        'preferred_updates_mode',
+        'interested_updates',
+        'accept_terms',
     ];
 
-    protected $casts = [
-        'receive_updates' => 'array',
-    ];
+    // protected $casts = [
+    //     'receive_updates' => 'array',
+    // ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -13,6 +13,30 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
+            // $table->id();
+            // $table->date('application_date');
+            // $table->string('membership_applied_for');
+            // $table->string('first_name');
+            // $table->string('last_name');
+            // $table->string('postal_address');
+            // $table->string('email')->unique();
+            // $table->string('contact_info');
+            // $table->string('marital_status');
+            // $table->date('date_of_salvation')->nullable();
+            // $table->string('where_do_you_go_to_church')->nullable();
+            // $table->string('name_of_your_pastor')->nullable();
+            // $table->string('serves_in_church');
+            // $table->string('department_of_church')->nullable();
+            // $table->string('school_or_work')->nullable();
+            // $table->string('location_of_school_or_work')->nullable();
+            // $table->string('career_path')->nullable();
+            // $table->string('job_or_vocation')->nullable();
+            // $table->string('special_gifts')->nullable();
+            // $table->json('receive_updates')->nullable();
+            // $table->boolean('terms_and_condition');
+            // $table->rememberToken();
+            // $table->timestamps();
+
             $table->id();
             $table->date('application_date');
             $table->string('membership_applied_for');
@@ -30,11 +54,11 @@ return new class extends Migration
             $table->string('school_or_work')->nullable();
             $table->string('location_of_school_or_work')->nullable();
             $table->string('career_path')->nullable();
-            $table->string('job_or_vocation')->nullable();
             $table->string('special_gifts')->nullable();
-            $table->json('receive_updates')->nullable();
-            $table->boolean('terms_and_condition');
-            $table->rememberToken();
+            $table->string('receive_updates');
+            $table->string('preferred_updates_mode');
+            $table->json('interested_updates')->nullable();
+            $table->string('accept_terms');
             $table->timestamps();
         });
 

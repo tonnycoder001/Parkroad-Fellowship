@@ -8,4 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::POST('/register', [RegisterController::class, 'register']);
+Route::post('register', [RegisterController::class, 'register']);
