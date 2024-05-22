@@ -12,12 +12,16 @@ class Mission extends Model
 {
     use HasFactory;
 
-    protected $fillables = [
-        'mission_id',
-        'description',
-        'location',
-        'date',
-        'budget_id'   //foreign key
+    // protected $fillables = [
+    //     'mission_id',
+    //     'description',
+    //     'location',
+    //     'date',
+    //     'budget_id'
+    // ];
+
+    protected $guarded = [
+        'id'
     ];
 
     public function budget()

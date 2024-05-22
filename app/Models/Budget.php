@@ -10,12 +10,16 @@ class Budget extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'budget_id',
-        'amount',
-        'estimated_expenses',
-        'actual_expenditures',
-        'funding_sources'
+    // protected $fillable = [
+    //     'budget_id',
+    //     'amount',
+    //     'estimated_expenses',
+    //     'actual_expenditures',
+    //     'funding_sources'
+    // ];
+
+    protected $guarded = [
+        'id'
     ];
 
 

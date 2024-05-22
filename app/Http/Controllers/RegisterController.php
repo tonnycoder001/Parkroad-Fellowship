@@ -37,11 +37,15 @@ class RegisterController extends Controller
             'receive_updates' => 'required|string',
             'preferred_updates_mode' => 'required|string',
             'interested_updates' => 'nullable|array',
-            'accept_terms' => 'required|string',
+            'accept_terms' => 'required|string|in:yes',
         ]);
 
         /*This code snippet checks if the interested_updates field is set in the $validatedData array.
          If it is set (meaning it exists and is not null), it encodes the value of interested_updates as a JSON string using json_encode().*/
+        if ($request->accept_terms !== 'yes') {
+            return redirect()->back()->withErrors(['accept_terms' => 'You must accept the terms and conditions to register.']);
+        }
+
         if (isset($validatedData['interested_updates'])) {
             $validatedData['interested_updates'] = json_encode($validatedData['interested_updates']);
         }
@@ -50,6 +54,6 @@ class RegisterController extends Controller
         User::create($validatedData);
 
         // redirects the user to dashboard
-        return redirect('/dashboard');
+        return redirect('/admin-dashboard');
     }
 }

@@ -9,13 +9,14 @@ use App\Models\MissionReport;
 use App\Models\PrayerRequest;
 use App\Models\MembershipStatus;
 use App\Models\MissionAssignment;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -23,26 +24,6 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        // 'application_date',
-        // 'membership_applied_for',
-        // 'first_name',
-        // 'last_name',
-        // 'postal_address',
-        // 'email',
-        // 'contact_info',
-        // 'marital_status',
-        // 'date_of_salvation',
-        // 'where_do_you_go_to_church',
-        // 'name_of_your_pastor',
-        // 'serves_in_church',
-        // 'department_of_church',
-        // 'school_or_work',
-        // 'location_of_school_or_work',
-        // 'career_path',
-        // 'job_or_vocation',
-        // 'special_gifts',
-        // 'receive_updates',
-        // 'terms_and_condition',
 
         'application_date',
         'membership_applied_for',
@@ -67,9 +48,6 @@ class User extends Authenticatable
         'accept_terms',
     ];
 
-    // protected $casts = [
-    //     'receive_updates' => 'array',
-    // ];
 
     /**
      * The attributes that should be hidden for serialization.
