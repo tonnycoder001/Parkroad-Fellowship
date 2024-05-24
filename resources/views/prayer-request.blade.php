@@ -17,14 +17,6 @@
 
             <form action="" method="POST">
                 @csrf
-
-                <div class="mb-4">
-                    <label for="member_id" class="block text-sm font-medium text-gray-700">Member ID</label>
-                    <input type="number" name="member_id" id="member_id"
-                        class="mt-1 block w-full border-gray-300 rounded-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        required>
-                </div>
-
                 <div class="mb-4">
                     <label for="text_request" class="block text-sm font-medium text-gray-700">Prayer Request</label>
                     <textarea name="text_request" id="text_request"

@@ -47,4 +47,9 @@ class Member extends Model
 
         return $this->belongsToMany(MembershipStatus::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

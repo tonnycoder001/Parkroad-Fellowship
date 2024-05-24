@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Budget;
 use App\Models\Mission;
 use Illuminate\Http\Request;
 
@@ -22,6 +23,18 @@ class MissionController extends Controller
 
         Mission::create($request->all());
 
-        return redirect()->route('event.create')->with('success', 'Event created successfully.');
+        // return redirect()->route('admin-dashboard')->with('success', 'Event created successfully.');
     }
+
+    // public function show($missionId)
+    // {
+    //     $mission = Mission::find($missionId);
+    //     $budgets = $mission->budgets;
+
+    //     $budgetId = 1;
+    //     $budget = Budget::find($budgetId);
+    //     $mission = $budget->mission;
+
+    //     return view('mission', compact('mission', 'budgets'));
+    // }
 }

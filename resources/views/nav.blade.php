@@ -14,9 +14,9 @@
     <div id="app">
         <nav class="bg-white shadow-md">
             <div class="container mx-auto px-6 py-3">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between ">
 
-                    <div class="flex justify-item-start ">
+                    <div class="flex justify ">
                         <img src="images/logo.png" class="h-8 w-auto" loading="lazy" srcset="images/logo.png 4x">
                     </div>
                     <h1 class="font-bold text-3xl">PARKROAD FELLOWSHIP</h1>

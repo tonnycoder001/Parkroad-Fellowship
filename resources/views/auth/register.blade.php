@@ -262,6 +262,8 @@
         </button>
 
     </form>
+
+    {{-- error message --}}
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             const termsAccepted = document.querySelector('input[name="accept_terms"]:checked').value;

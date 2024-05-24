@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Member;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
+
     public function index()
     {
         return view('auth.register');
@@ -42,16 +44,18 @@ class RegisterController extends Controller
 
         /*This code snippet checks if the interested_updates field is set in the $validatedData array.
          If it is set (meaning it exists and is not null), it encodes the value of interested_updates as a JSON string using json_encode().*/
-        if ($request->accept_terms !== 'yes') {
-            return redirect()->back()->withErrors(['accept_terms' => 'You must accept the terms and conditions to register.']);
-        }
-
         if (isset($validatedData['interested_updates'])) {
             $validatedData['interested_updates'] = json_encode($validatedData['interested_updates']);
         }
 
+        // error if user does not accept terms and conditions
+        if ($request->accept_terms !== 'yes') {
+            return redirect()->back()->withErrors(['accept_terms' => 'You must accept the terms and conditions to register.']);
+        }
+
         // creats a new user with the validated data
         User::create($validatedData);
+
 
         // redirects the user to dashboard
         return redirect('/admin-dashboard');
