@@ -74,6 +74,12 @@ class User extends Authenticatable
 
 
     // Relationships
+    public function missions()
+    {
+        return $this->belongsToMany(Mission::class, 'mission_assignments', 'member_id', 'mission_id');
+    }
+
+
     public function role()
     {
         return $this->belongsTo(Role::class);

@@ -13,11 +13,10 @@ class Mission extends Model
     use HasFactory;
 
     // protected $fillables = [
-    //     'mission_id',
     //     'description',
     //     'location',
     //     'date',
-    //     'budget_id'
+
     // ];
 
     protected $guarded = [

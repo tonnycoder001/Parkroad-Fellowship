@@ -17,15 +17,14 @@ class MissionAssignment extends Model
     ];
 
     // Relationships
-
     public function mission()
     {
-        return $this->hasMany(Mission::class);
+        return $this->belongsTo(Mission::class);
     }
 
     public function member()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     // // members

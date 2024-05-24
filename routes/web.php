@@ -2,10 +2,12 @@
 
 use App\Models\MissionAssignment;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShowController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ShowMissionController;
 use App\Http\Controllers\MissionReportController;
 use App\Http\Controllers\PrayerRequestController;
 use App\Http\Controllers\MissionAssignmentController;
@@ -37,3 +39,7 @@ Route::get('/admin.mission-assignment', [MissionAssignmentController::class, 'cr
 
 Route::get('/admin.mission-report', [MissionReportController::class, 'create'])->name('mission-report.create');
 Route::post('/admin.mission-report', [MissionReportController::class, 'store'])->name('mission-report.store');
+
+
+Route::get('/admin.mission-assignment', [MissionAssignmentController::class, 'show']);
+Route::post('/assign-members', [MissionAssignmentController::class, 'assignMembers'])->name('assign_members');
