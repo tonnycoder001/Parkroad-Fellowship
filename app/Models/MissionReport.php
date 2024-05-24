@@ -11,11 +11,14 @@ class MissionReport extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'mission_report_id',
-        'mission_id', //foreign id
-        'report_text'
+    // protected $fillable = [
+    //     'mission_report_id',
+    //     'mission_id', //foreign id
+    //     'report_text'
 
+    // ];
+    protected $guarded = [
+        'id'
     ];
 
     // Relationships

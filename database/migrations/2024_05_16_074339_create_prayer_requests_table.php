@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('prayer_requests', function (Blueprint $table) {
             $table->id();
-            $table->foreignId(Member::class, 'member_id');
+            // $table->foreignId(Member::class, 'member_id');
             $table->string('text_request');
             $table->timestamps();
         });

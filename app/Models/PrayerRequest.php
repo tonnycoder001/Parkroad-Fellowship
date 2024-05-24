@@ -9,10 +9,13 @@ class PrayerRequest extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'prayer_request_id',
-        'member_id',   //foreign id
-        'text_request'
+    // protected $fillable = [
+    //     'prayer_request_id',
+    //     'member_id',   //foreign id
+    //     'text_request'
+    // ];
+    protected $guarded = [
+        'id'
     ];
 
     // relationship

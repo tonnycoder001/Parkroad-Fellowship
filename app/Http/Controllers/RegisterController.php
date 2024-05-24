@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
 
+
     public function index()
     {
         return view('auth.register');
@@ -56,8 +57,7 @@ class RegisterController extends Controller
         // creats a new user with the validated data
         User::create($validatedData);
 
-
         // redirects the user to dashboard
-        return redirect('/admin-dashboard');
+        return redirect('/admin.admin-dashboard');
     }
 }

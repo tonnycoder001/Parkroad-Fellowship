@@ -1,5 +1,5 @@
 <script src="https://cdn.tailwindcss.com"></script>
-@extends('nav')
+@extends('admin.nav')
 
 @section('content')
     <div id="app" class="flex h-screen">
@@ -13,17 +13,17 @@
 
                     <h1 class="font-bold text-lg">Admin-Dashboard</h1>
                     <a class="block text-gray-800 hover:bg-gray-200 p-2 rounded" href="/mission"
-                        onclick="loadContent('/mission', event)">Mission</a>
+                        onclick="loadContent('/admin.mission', event)">Mission</a>
                     <a class="block text-gray-800 hover:bg-gray-200 p-2 rounded" href="/mission-assignment"
-                        onclick="loadContent('/mission-assignment', event)">Mission-assignmemt</a>
-                    <a class="block text-gray-800 hover:bg-gray-200 p-2 rounded" href=""
-                        onclick="loadContent('/mission-report', event)">Mission Report</a>
+                        onclick="loadContent('/admin.mission-assignment', event)">Mission-assignment</a>
+                    <a class="block text-gray-800 hover:bg-gray-200 p-2 rounded" href="/mission-report"
+                        onclick="loadContent('/admin.mission-report', event)">Mission Report</a>
                     <a class="block text-gray-800 hover:bg-gray-200 p-2 rounded" href=""
                         onclick="loadContent('/members', event)">Members</a>
                     <a class="block text-gray-800 hover:bg-gray-200 p-2 rounded" href="/budget"
-                        onclick="loadContent('/budget', event)">Budget</a>
+                        onclick="loadContent('/admin.budget', event)">Budget</a>
                     <a class="block text-gray-800 hover:bg-gray-200 p-2 rounded" href="/prayer-request"
-                        onclick="loadContent('/prayer-request', event)">Prayer Request</a>
+                        onclick="loadContent('/admin.prayer-request', event)">Prayer Request</a>
                 </div>
 
             </nav>

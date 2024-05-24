@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('amount');
             // $table->foreignId(Mission::class, 'mission_id');
             $table->integer('estimated_expenses');
-            $table->foreignId('mission_id')->constrained()->onDelete('cascade');
+            // $table->foreignId('mission_id')->constrained()->onDelete('cascade');
             $table->string('funding_sources');
             $table->integer('actual_expenditures');
             $table->timestamps();

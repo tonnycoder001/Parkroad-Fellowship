@@ -15,7 +15,8 @@
         <div class="bg-white shadow-md rounded-lg p-6">
             <h1 class="text-2xl font-semibold mb-4">Prayer Request</h1>
 
-            <form action="" method="POST">
+            <!-- Corrected form action -->
+            <form action="{{ route('prayer-request.store') }}" method="POST">
                 @csrf
                 <div class="mb-4">
                     <label for="text_request" class="block text-sm font-medium text-gray-700">Prayer Request</label>

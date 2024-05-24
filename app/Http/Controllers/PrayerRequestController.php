@@ -9,18 +9,16 @@ class PrayerRequestController extends Controller
 {
     public function create()
     {
-        return view('prayer-request');
+        return view('admin.prayer-request');
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'member_id' => 'required|exists:members,id',
+            // 'member_id' => 'required|exists:members,id',
             'text_request' => 'required|string',
         ]);
 
         PrayerRequest::create($request->all());
-
-        return redirect()->route('prayer_request.create')->with('success', 'Prayer request submitted successfully.');
     }
 }

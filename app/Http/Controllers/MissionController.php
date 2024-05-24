@@ -10,7 +10,7 @@ class MissionController extends Controller
 {
     public function create()
     {
-        return view('mission');
+        return view('admin.mission');
     }
 
     public function store(Request $request)

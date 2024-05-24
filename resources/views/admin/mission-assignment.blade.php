@@ -8,9 +8,10 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
             <h2 class="text-xl font-semibold mb-2">Available Members</h2>
-            <ul class="list-disc pl-4">
+            <ul>
 
             </ul>
+
         </div>
 
         <div>
