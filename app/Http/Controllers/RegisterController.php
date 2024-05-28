@@ -16,6 +16,7 @@ class RegisterController extends Controller
     }
 
 
+    // create a new users
     public function register(Request $request)
     {
 

@@ -17,13 +17,6 @@
                 @csrf
 
                 <div class="mb-4">
-                    <label for="report_title" class="block text-sm font-medium text-gray-700">Report Title</label>
-                    <input type="text" name="report_title" id="report_title"
-                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h-12"
-                        required>
-                </div>
-
-                <div class="mb-4">
                     <label for="name_of_mission_leader" class="block text-sm font-medium text-gray-700">Name of Mission
                         Leader</label>
                     <input type="text" name="name_of_mission_leader" id="name_of_mission_leader"
@@ -35,29 +28,6 @@
                     <label for="list_of_missionaries" class="block text-sm font-medium text-gray-700">List of
                         Missionaries</label>
                     <input type="text" name="list_of_missionaries" id="list_of_missionaries"
-                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h-12"
-                        required>
-                </div>
-
-                <div class="mb-4">
-                    <label for="name_of_host_institution" class="block text-sm font-medium text-gray-700">Name of Host
-                        Institution</label>
-                    <input type="text" name="name_of_host_institution" id="name_of_host_institution"
-                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h-12"
-                        required>
-                </div>
-
-                <div class="mb-4">
-                    <label for="date_of_mission" class="block text-sm font-medium text-gray-700">Date of Mission</label>
-                    <input type="date" name="date_of_mission" id="date_of_mission"
-                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h-12"
-                        required>
-                </div>
-
-                <div class="mb-4">
-                    <label for="nature_of_mission" class="block text-sm font-medium text-gray-700">Nature of
-                        Mission</label>
-                    <input type="text" name="nature_of_mission" id="nature_of_mission"
                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h-12"
                         required>
                 </div>
@@ -125,8 +95,8 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="feedback_from_the_institution"
-                        class="block text-sm font-medium text-gray-700">feedback from the institution</label>
+                    <label for="feedback_from_the_institution" class="block text-sm font-medium text-gray-700">feedback
+                        from the institution</label>
                     <input type="text" name="feedback_from_the_institution" id="feedback_from_the_institution"
                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h-12"
                         required>

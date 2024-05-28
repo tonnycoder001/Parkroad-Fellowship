@@ -14,9 +14,6 @@
 
         <form action="{{ route('budget.store') }}" method="POST" class="bg-white shadow-md rounded-lg p-6">
             @csrf
-
-            {{-- <input type="hidden" name="mission_id" value="{{ 1 }}"> --}}
-
             <div class="mb-6 bg-gray-50 rounded-md p-2">
                 <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
                 <input type="number" name="amount" id="amount"

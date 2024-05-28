@@ -13,6 +13,8 @@ class MissionReportController extends Controller
         return view('admin.mission-report');
     }
 
+
+    // create mission report and save it in the databse
     public function store(Request $request)
     {
         $request->validate([

@@ -23,6 +23,11 @@ class Mission extends Model
         'id'
     ];
 
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'mission_assignments');
+    }
+
     public function budgets()
     {
         return $this->hasMany(Budget::class);

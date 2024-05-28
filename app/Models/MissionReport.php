@@ -10,13 +10,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class MissionReport extends Model
 {
     use HasFactory;
-
-    // protected $fillable = [
-    //     'mission_report_id',
-    //     'mission_id', //foreign id
-    //     'report_text'
-
-    // ];
     protected $guarded = [
         'id'
     ];

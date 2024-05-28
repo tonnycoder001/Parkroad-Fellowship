@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BudgetController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ShowMissionController;
@@ -42,4 +43,11 @@ Route::post('/admin.mission-report', [MissionReportController::class, 'store'])-
 
 
 Route::get('/admin.mission-assignment', [MissionAssignmentController::class, 'show']);
-Route::post('/assign-members', [MissionAssignmentController::class, 'assignMembers'])->name('assign_members');
+Route::post('/assign', [MissionAssignmentController::class, 'assign'])->name('assign');
+
+
+
+Route::get('/admin.members', [UserController::class, 'index'])->name('members.index');
+Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+Route::delete('/missions/{mission}', [MissionController::class, 'destroy'])->name('missions.destroy');

@@ -15,11 +15,12 @@ class BudgetController extends Controller
         return view('admin.budget');
     }
 
+
+    // create budget
     public function store(Request $request)
     {
         $request->validate([
             'amount' => 'required|integer',
-            // 'mission_id' => 'required|exists:mission,id',
             'estimated_expenses' => 'required|integer',
             'funding_sources' => 'required|string',
             'actual_expenditures' => 'required|integer',

@@ -13,6 +13,8 @@ class MissionController extends Controller
         return view('admin.mission');
     }
 
+
+    // create a mission
     public function store(Request $request)
     {
         $request->validate([
@@ -26,15 +28,10 @@ class MissionController extends Controller
         // return redirect()->route('admin-dashboard')->with('success', 'Event created successfully.');
     }
 
-    // public function show($missionId)
+
+    // public function destroy(Mission $mission)
     // {
-    //     $mission = Mission::find($missionId);
-    //     $budgets = $mission->budgets;
-
-    //     $budgetId = 1;
-    //     $budget = Budget::find($budgetId);
-    //     $mission = $budget->mission;
-
-    //     return view('mission', compact('mission', 'budgets'));
+    //     $mission->delete();
+    //     return redirect()->back()->with('success', 'Mission deleted successfully');
     // }
 }

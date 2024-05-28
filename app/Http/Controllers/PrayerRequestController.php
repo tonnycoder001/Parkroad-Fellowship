@@ -12,10 +12,10 @@ class PrayerRequestController extends Controller
         return view('admin.prayer-request');
     }
 
+    // create a new prayer request
     public function store(Request $request)
     {
         $request->validate([
-            // 'member_id' => 'required|exists:members,id',
             'text_request' => 'required|string',
         ]);
 

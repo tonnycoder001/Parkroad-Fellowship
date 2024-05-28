@@ -76,38 +76,38 @@ class User extends Authenticatable
     // Relationships
     public function missions()
     {
-        return $this->belongsToMany(Mission::class, 'mission_assignments', 'member_id', 'mission_id');
+        return $this->belongsToMany(Mission::class, 'mission_assignments');
     }
 
 
-    public function role()
-    {
-        return $this->belongsTo(Role::class);
-    }
+    //     public function role()
+    //     {
+    //         return $this->belongsTo(Role::class);
+    //     }
 
 
-    public function membershipStatus()
-    {
-        return $this->hasOne(MembershipStatus::class);
-    }
+    //     public function membershipStatus()
+    //     {
+    //         return $this->hasOne(MembershipStatus::class);
+    //     }
 
-    public function missionAssignments()
-    {
-        return $this->hasMany(MissionAssignment::class);
-    }
+    //     public function missionAssignments()
+    //     {
+    //         return $this->hasMany(MissionAssignment::class);
+    //     }
 
-    public function missionReports()
-    {
-        return $this->hasMany(MissionReport::class, 'mission_leader_id');
-    }
+    //     public function missionReports()
+    //     {
+    //         return $this->hasMany(MissionReport::class, 'mission_leader_id');
+    //     }
 
-    public function prayerRequests()
-    {
-        return $this->hasMany(PrayerRequest::class);
-    }
+    //     public function prayerRequests()
+    //     {
+    //         return $this->hasMany(PrayerRequest::class);
+    //     }
 
-    public function member()
-    {
-        return $this->hasOne(Member::class);
-    }
+    //     public function member()
+    //     {
+    //         return $this->hasOne(Member::class);
+    //     }
 }

@@ -18,25 +18,28 @@ class MissionAssignmentController extends Controller
     public function show()
     {
 
+        // fetch data from the database, then render it to the view
         $data = User::all();
         $missions = Mission::all();
-        $assignedMembers = MissionAssignment::with('member', 'mission')->get();
-
-        return view('admin.mission-assignment', compact('data', 'missions', 'assignedMembers'));
+        return view('admin.mission-assignment', compact('data', 'missions'));
     }
 
-    public function assignMembers(Request $request)
+
+    // assign members to a mission
+    public function assign(Request $request)
     {
         $request->validate([
-            'member_id' => 'required|exists:users,id',
+            'member_ids' => 'required|array',
+            'member_ids.*' => 'exists:users,id',
             'mission_id' => 'required|exists:missions,id',
         ]);
 
-        MissionAssignment::create([
-            'member_id' => $request->member_id,
-            'mission_id' => $request->mission_id,
-        ]);
+        $mission = Mission::find($request->mission_id);
 
-        return redirect()->back()->with('success', 'Member assigned to mission successfully.');
+        // Assign members to the mission
+        $mission->users()->attach($request->member_ids);
+
+
+        return redirect()->back()->with('success', 'Members assigned to mission successfully');
     }
 }
